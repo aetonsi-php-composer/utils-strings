@@ -2,6 +2,7 @@
 
 namespace Aetonsi\Utils;
 
+require 'polyfill.php';
 class Strings
 {
     /**
@@ -15,9 +16,9 @@ class Strings
      * @return string
      */
     public static function random_str(
-        int $length = 64,
-        string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    ): string {
+        $length = 64,
+        $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    ) {
         if ($length < 1) {
             throw new \RangeException("Length must be a positive integer");
         }
