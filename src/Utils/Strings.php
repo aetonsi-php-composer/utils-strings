@@ -2,7 +2,7 @@
 
 namespace Aetonsi\Utils;
 
-require 'polyfill.php';
+
 class Strings
 {
     /**
