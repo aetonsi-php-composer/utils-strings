@@ -39,8 +39,10 @@ class Strings
      * @param bool $forceNumericEntities if true, ALL the characters are converted to html numeric entities
      * @return string
      */
-    public static function htmlEntitiesFull($str, $forceNumericEntities = false)
-    {
+    public static function htmlEntitiesFull(
+        string $str,
+        bool $forceNumericEntities = false
+    ): string {
         $str = \mb_convert_encoding($str, 'UTF-32', 'UTF-8');
         $codepoints = \unpack('N*', $str);
         $result = \array_map(function ($codepoint) use ($forceNumericEntities) {
