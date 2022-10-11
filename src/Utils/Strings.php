@@ -19,7 +19,7 @@ class Strings
         string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
     ): string {
         if ($length < 1) {
-            throw new \RangeException("Length must be a positive integer");
+            throw new \RangeException('Length must be a positive integer');
         }
         $pieces = [];
         $max = \mb_strlen($keyspace, '8bit') - 1;
@@ -70,5 +70,21 @@ class Strings
         }, $codepoints);
 
         return \implode('', $result);
+    }
+
+
+    /**
+     * Un-does unicode escape sequences (eg. "\uXXXX\uYYYY") in $text, using \json_decode. Equivalent of PHP7+ "\u{XXXX}\u{YYYY}".
+     *
+     * @see https://wiki.php.net/rfc/unicode_escape
+     * @see https://stackoverflow.com/questions/2934563/how-to-decode-unicode-escape-sequences-like-u00ed-to-proper-utf-8-encoded-cha#comment92828689_7981441
+     *
+     * @param string $text
+     * @return string
+     */
+    public static function unicodeUnescape(
+        string $text
+    ): string {
+        return \json_decode('"' . \str_replace('"', '\\"', $text) . '"');
     }
 }
