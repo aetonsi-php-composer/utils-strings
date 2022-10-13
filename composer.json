@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "php": ">=5.4.0",
-        "aetonsi/polyfills": "*"
+        "aetonsi/polyfills": ">=2.0.0"
     },
     "license": "WTFPL",
     "authors": [
