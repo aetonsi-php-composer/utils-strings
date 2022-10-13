@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22594e72ec45f3d580749e317263bc3d",
+    "content-hash": "37aaa3c34c438c9d4d5f20cef8014498",
     "packages": [
         {
             "name": "aetonsi/polyfills",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aetonsi/aetonsi-polyfills.git",
-                "reference": "317dfd8b85b8ace9f158f74b88bf073397607f46"
+                "reference": "bc0d8af2c2db232b330073112f878bfc5099bc88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aetonsi/aetonsi-polyfills/zipball/317dfd8b85b8ace9f158f74b88bf073397607f46",
-                "reference": "317dfd8b85b8ace9f158f74b88bf073397607f46",
+                "url": "https://api.github.com/repos/aetonsi/aetonsi-polyfills/zipball/bc0d8af2c2db232b330073112f878bfc5099bc88",
+                "reference": "bc0d8af2c2db232b330073112f878bfc5099bc88",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.45",
+                "php": ">=5.4.8",
                 "symfony/polyfill-mbstring": "^1.19",
                 "symfony/polyfill-php54": "^1.19",
                 "symfony/polyfill-php55": "^1.19",
@@ -51,9 +51,9 @@
             "description": "various polyfills",
             "support": {
                 "issues": "https://github.com/aetonsi/aetonsi-polyfills/issues",
-                "source": "https://github.com/aetonsi/aetonsi-polyfills/tree/2.0.0"
+                "source": "https://github.com/aetonsi/aetonsi-polyfills/tree/2.0.1"
             },
-            "time": "2022-10-13T10:31:26+00:00"
+            "time": "2022-10-13T10:50:03+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
